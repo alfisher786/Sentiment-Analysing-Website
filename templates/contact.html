@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Us
+{% endblock title %} 
+
+{% block body %}
+<h2 style="text-align: center; margin-top: 50px; margin-bottom: 20px;">Contact Us</h2>
+<form method="POST" action="">
+{% csrf_token %}
+<div style="width:1200px; margin-left:175px; color: #00050a;">
+  <div class="mb-3" style="color: #00050a;">
+    <label for="exampleInputEmail1" class="form-label" id="mailt">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text" style="color: #00050a;">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3" style="color: #00050a;>
+    <label for="exampleInputPassword1" class="form-label" id="namet" name="namet">Name</label>
+    <input type="text" class="form-control" id="name1" name="name1">
+  </div>
+  <div class="mb-3"style="width:1200px;">
+    <label for="text1" class="form-label">Queries</label>  
+    <textarea class="form-control" placeholder="Enter your queries here.." id="query" name="query" rows="6"></textarea>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+{% endblock body %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Text Analysis
+{% endblock title %}
+
+{% block body %}
+<h2 style="text-align:center; margin-top:50px; margin-bottom:50px; color: #04404c;">Text Feelings Analysis</h2>
+<form method="GET" action="/result">
+{% csrf_token %}
+<div class="mb-3">
+    <textarea class="form-control" placeholder="Enter text to analyse" id="text" name="text" rows="6"
+        style="width:1450px; margin-left:70px;"></textarea>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right:80px;">
+    <button class="btn btn-primary me-md-2" id="txtbtn" name="txtbtn" type="submit">Search</button>
+  </div>
+</form>
+{% endblock body %}
